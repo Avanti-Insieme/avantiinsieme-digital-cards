@@ -1,0 +1,43 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  color: #354a53;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-jakarta), system-ui, sans-serif; }
+
+a { color: #26736d; text-decoration: none; }
+a:hover { color: #1e5c57; }
+
+button { font-family: inherit; }
+
+/* 3px teal focus ring, per the accessibility spec */
+:focus-visible { outline: 3px solid #26736d; outline-offset: 2px; border-radius: 4px; }
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+  background: #ffffff;
+  color: #112541;
+  padding: 12px 18px;
+  font-weight: 600;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus { left: 0; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
